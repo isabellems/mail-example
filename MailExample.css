@@ -1,0 +1,80 @@
+.example {
+   position: relative;
+    background-color: #f1f1f1;
+    border: 1px solid #e5e5e5;
+    padding: 20px 15px;
+    margin: 30px 0;
+    color: rgba(64, 64, 64, 0.9);
+    font-family: 'Share Tech Mono', monospace;
+    word-break: break-all;
+}
+
+.example span {
+    margin: 0;
+}
+
+.example .actions {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+}
+
+.example .actions .far,
+.example .actions .fas {
+   font-size: 18px;
+}
+
+.example .actions > * {
+   padding: 0 15px;
+}
+
+.example .actions button {
+   all: unset;
+}
+
+.example .actions a,
+.example .actions button {
+   color: #353f55;
+   transition: color 0.5s;
+   cursor: pointer;
+}
+
+.example .actions a:hover,
+.example .actions button:hover {
+   color: #B56357;
+   transition: color 0.5s;
+}
+
+.example .mail-subject {
+   margin-top: 0;
+}
+
+.example  #copiedNotification {
+    color: rgba(0, 128, 0, 0.76);
+    text-align: center;
+    height: 10px;
+    opacity: 0;
+    margin-top: 10px;
+}
+
+.example  #copiedNotification.show {
+    animation: Show 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.example  #copiedNotification.disappeared {
+    opacity: 1;
+    animation: Disappear 1.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Show {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes Disappear {
+    0%   {opacity: 1;}
+    50%  {opacity: 0.8;}
+    100% {opacity: 0;}
+}
